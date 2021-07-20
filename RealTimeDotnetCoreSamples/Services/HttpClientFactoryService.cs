@@ -35,7 +35,7 @@ namespace RealTimeDotnetCoreSamples.Services
             {
                 if (!httpRequest.IsValid)
                 {
-                    this._logger.LogError("GetHttpResponse Not Valid", new object[] { httpRequest });
+                    this._logger.LogError($"GetHttpResponse Not Valid! ValidationError: {httpRequest.ValidationError}", new object[] { httpRequest });
                     return ResultHandler.Fail<TRes>(E_ErrorType.EntityNotValid);
                 }
 
